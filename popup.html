@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone number to whatsapp </title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .popup-parent{
+           
+            padding: 10px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        input{
+            border: 2px solid gray;
+            color: black;
+            height: 30px;
+            margin: auto;
+            padding: 10px;
+            width: 60%;
+            background-color: rgb(230, 228, 228);
+
+        }
+        .btn-parent{
+            margin-top: 20px;
+            margin: 5px auto;
+            display: flex;
+
+
+        
+        }
+        a{
+           padding: 20px 30px; 
+           text-decoration: none;
+           background-color: rgb(16, 175, 16);
+           color: white;
+           margin: 25px;
+           cursor: pointer;
+           font-size: 25px;
+        }
+        p{
+            margin: 0px;
+            font-size: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="popup-parent">
+        <input v-model="number" type="tel" name="phone " id="phone" ref="phone" placeholder="number">
+        
+        <div class="btn-parent">
+            <a :href="link + number">open</a>
+            <a :href="link + number" target="_blank">open in new tab</a>
+            <!-- <p>{{link + number}}</p> -->
+        </div>
+        
+        <p>please put country code  before mobile number
+            eg:+1 969696969
+        </p>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- <script src="/vue.min.js"></script> -->
+    <script src="popup.js"></script>
+</body>
+</html>

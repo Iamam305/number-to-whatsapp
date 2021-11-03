@@ -1,0 +1,27 @@
+{
+    "name": "NUMBER TO DIRECT WHATSAPP",
+    "description": "direct message to someone  on whatsapp without saving phone number",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "icons":{"140":"icon_128.png"},
+    "browser_action":{
+        "default_icon":"icon.png",
+        "default_popup":"popup.html"
+
+    },
+    "background": {
+        "scripts": ["popup.js"], 
+        "persistent": false
+      },
+    "permissions":["activeTab", "storage","http://*/", "https://*/"],
+    "content_scripts": [ 
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["popup.js"]
+        }
+      ]
+
+
+}
